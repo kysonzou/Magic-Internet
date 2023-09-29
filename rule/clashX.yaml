@@ -334,14 +334,6 @@ rules:
     - 'DOMAIN-SUFFIX,springsunday.net, 🎯 直连'
     - 'DOMAIN-SUFFIX,sspai.com, 🎯 直连'
     - 'DOMAIN-SUFFIX,staticdn.net, 🎯 直连'
-    - 'DOMAIN-SUFFIX,steam-chat.com, 🎯 直连'
-    - 'DOMAIN-SUFFIX,steamcdn-a.akamaihd.net, 🎯 直连'
-    - 'DOMAIN-SUFFIX,steamcontent.com, 🎯 直连'
-    - 'DOMAIN-SUFFIX,steamgames.com, 🎯 直连'
-    - 'DOMAIN-SUFFIX,steampowered.com, 🎯 直连'
-    - 'DOMAIN-SUFFIX,steamstat.us, 🎯 直连'
-    - 'DOMAIN-SUFFIX,steamstatic.com, 🎯 直连'
-    - 'DOMAIN-SUFFIX,steamusercontent.com, 🎯 直连'
     - 'DOMAIN-SUFFIX,takungpao.com, 🎯 直连'
     - 'DOMAIN-SUFFIX,tandfonline.com, 🎯 直连'
     - 'DOMAIN-SUFFIX,teamviewer.com, 🎯 直连'
@@ -404,6 +396,16 @@ rules:
 
 # Kyson add Bing
     - 'DOMAIN-KEYWORD,bing, 🚀 代理'
+
+# kyson steam
+    - 'DOMAIN-SUFFIX,steam-chat.com, 🚀 代理'
+    - 'DOMAIN-SUFFIX,steamcdn-a.akamaihd.net, 🚀 代理'
+    - 'DOMAIN-SUFFIX,steamcontent.com, 🚀 代理'
+    - 'DOMAIN-SUFFIX,steamgames.com, 🚀 代理'
+    - 'DOMAIN-SUFFIX,steampowered.com, 🚀 代理'
+    - 'DOMAIN-SUFFIX,steamstat.us, 🚀 代理'
+    - 'DOMAIN-SUFFIX,steamstatic.com, 🚀 代理'
+    - 'DOMAIN-SUFFIX,steamusercontent.com, 🚀 代理'    
 
 
 # Apple
