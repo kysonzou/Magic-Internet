@@ -24,32 +24,32 @@ dns-direct-fallback-proxy : true
 
 
 proxies:
-    - { name: '🇭🇰 香港 专线 A1', type: ss, server: speed01.duang2019.com, port: 10001, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇭🇰 香港 专线 A2', type: ss, server: speed01.duang2019.com, port: 10002, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇭🇰 香港 专线 A3', type: ss, server: speed01.duang2019.com, port: 10003, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇭🇰 香港 专线 A4  |  NF ChatGPT', type: ss, server: speed01.duang2019.com, port: 10004, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇭🇰 香港 专线 A5 | 家庭宽带', type: ss, server: speed01.duang2019.com, port: 10005, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇹🇼 台湾 专线 A1', type: ss, server: speed01.duang2019.com, port: 10011, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇹🇼 台湾 专线 A2', type: ss, server: speed01.duang2019.com, port: 10012, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇹🇼 台湾 专线 A3', type: ss, server: speed01.duang2019.com, port: 10013, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇹🇼 台湾 专线 A4', type: ss, server: speed01.duang2019.com, port: 10014, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇹🇼 台湾 专线 A5 | NF ChatGPT', type: ss, server: speed01.duang2019.com, port: 10015, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇺🇸 美国 专线 A1', type: ss, server: speed01.duang2019.com, port: 10031, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇺🇸 美国 专线 A2', type: ss, server: speed01.duang2019.com, port: 10032, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇺🇸 美国 专线 A3', type: ss, server: speed01.duang2019.com, port: 10033, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇺🇸 美国 专线 A4', type: ss, server: speed01.duang2019.com, port: 10034, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇺🇸 美国 专线 A5 | NF ChatGPT', type: ss, server: speed01.duang2019.com, port: 10035, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A1', type: ss, server: speed01.duang2019.com, port: 10041, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A2', type: ss, server: speed01.duang2019.com, port: 10042, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A3', type: ss, server: speed01.duang2019.com, port: 10043, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A4', type: ss, server: speed01.duang2019.com, port: 10044, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A5 | NF ChatGPT', type: ss, server: speed01.duang2019.com, port: 10045, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇯🇵 日本 专线 A1', type: ss, server: speed01.duang2019.com, port: 10021, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇯🇵 日本 专线 A2', type: ss, server: speed01.duang2019.com, port: 10022, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇯🇵 日本 专线 A3', type: ss, server: speed01.duang2019.com, port: 10023, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇯🇵 日本 专线 A4', type: ss, server: speed01.duang2019.com, port: 10024, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇯🇵 日本 专线 A5 | NF ChatGPT', type: ss, server: speed01.duang2019.com, port: 10025, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
-    - { name: '🇰🇷 韩国 专线 A1', type: ss, server: speed01.duang2019.com, port: 10051, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇭🇰 香港 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10001, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇭🇰 香港 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10002, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇭🇰 香港 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10003, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇭🇰 香港 专线 A4  |  NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10004, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇭🇰 香港 专线 A5 | 家庭宽带', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10005, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10011, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10012, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10013, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A4', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10014, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A5 | NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10015, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10031, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10032, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10033, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A4', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10034, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A5 | NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10035, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10041, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10042, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10043, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A4', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10044, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A5 | NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10045, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10021, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10022, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10023, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A4', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10024, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A5 | NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10025, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇰🇷 韩国 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10051, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
 proxy-groups:
     - { name: '🚀 代理', type: select, proxies: ['🇭🇰 香港 专线 A1', '🇭🇰 香港 专线 A2', '🇭🇰 香港 专线 A3', '🇭🇰 香港 专线 A4  |  NF ChatGPT', '🇭🇰 香港 专线 A5 | 家庭宽带', '🇹🇼 台湾 专线 A1', '🇹🇼 台湾 专线 A2', '🇹🇼 台湾 专线 A3', '🇹🇼 台湾 专线 A4', '🇹🇼 台湾 专线 A5 | NF ChatGPT', '🇺🇸 美国 专线 A1', '🇺🇸 美国 专线 A2', '🇺🇸 美国 专线 A3', '🇺🇸 美国 专线 A4', '🇺🇸 美国 专线 A5 | NF ChatGPT', '🇸🇬 新加坡 专线 A1', '🇸🇬 新加坡 专线 A2', '🇸🇬 新加坡 专线 A3', '🇸🇬 新加坡 专线 A4', '🇸🇬 新加坡 专线 A5 | NF ChatGPT', '🇯🇵 日本 专线 A1', '🇯🇵 日本 专线 A2', '🇯🇵 日本 专线 A3', '🇯🇵 日本 专线 A4', '🇯🇵 日本 专线 A5 | NF ChatGPT', '🇰🇷 韩国 专线 A1'] }
     - { name: '🐟 遗漏', type: select, proxies: ['🚀 代理', DIRECT, REJECT]}
