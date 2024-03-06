@@ -393,6 +393,9 @@ rules:
     
 # Kyson add
     - 'DOMAIN-SUFFIX,555dy1.com, 🎯 直连'
+    - 'DOMAIN-SUFFIX,555u.store, 🎯 直连'
+    - 'DOMAIN-SUFFIX,5view.shop, 🎯 直连'
+    
 
 # Kyson add Bing
     - 'DOMAIN-KEYWORD,bing, 🚀 代理'
