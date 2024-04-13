@@ -395,10 +395,16 @@ rules:
     - 'DOMAIN-SUFFIX,555dy1.com, 🎯 直连'
     - 'DOMAIN-SUFFIX,555u.store, 🎯 直连'
     - 'DOMAIN-SUFFIX,5view.shop, 🎯 直连'
+    - 'DOMAIN-SUFFIX,55app.shop, 🎯 直连'
+    - 'DOMAIN-SUFFIX,55flix.com, 🎯 直连'
     
 
 # Kyson add Bing
     - 'DOMAIN-KEYWORD,bing, 🚀 代理'
+
+# Kyson add openai
+    - 'DOMAIN-SUFFIX,openai.com, 🚀 代理'
+    - 'DOMAIN-SUFFIX,chat.openai.com, 🚀 代理'
 
 # kyson steam
     - 'DOMAIN-SUFFIX,steam-chat.com, 🚀 代理'
