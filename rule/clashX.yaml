@@ -390,22 +390,29 @@ rules:
     - 'DOMAIN-SUFFIX,zmzapi.net, 🎯 直连'
     - 'DOMAIN-SUFFIX,zmzfile.com, 🎯 直连'
     - 'DOMAIN-SUFFIX,manmanbuy.com, 🎯 直连'
-    
+
+
 # Kyson add
+    - 'DOMAIN-SUFFIX,whoer.net, 🚀 代理'
+    - 'DOMAIN-SUFFIX,whrq.net, 🚀 代理'
+# Kyson 555
     - 'DOMAIN-SUFFIX,555dy1.com, 🎯 直连'
     - 'DOMAIN-SUFFIX,555u.store, 🎯 直连'
     - 'DOMAIN-SUFFIX,5view.shop, 🎯 直连'
     - 'DOMAIN-SUFFIX,55app.shop, 🎯 直连'
     - 'DOMAIN-SUFFIX,55flix.com, 🎯 直连'
-    
-
 # Kyson add Bing
     - 'DOMAIN-KEYWORD,bing, 🚀 代理'
-
 # Kyson add openai
+    - 'DOMAIN-KEYWORD,openai, 🚀 代理'
     - 'DOMAIN-SUFFIX,openai.com, 🚀 代理'
     - 'DOMAIN-SUFFIX,chat.openai.com, 🚀 代理'
-
+    - 'DOMAIN-SUFFIX,chatgpt.com, 🚀 代理'
+# Kyson add claude
+    - 'DOMAIN-KEYWORD,claude, 🚀 代理'
+    - 'DOMAIN-SUFFIX,claude.ai, 🚀 代理'
+    - 'DOMAIN-KEYWORD,anthropic, 🚀 代理'
+    - 'DOMAIN-SUFFIX,anthropic.com, 🚀 代理'  
 # kyson steam
     - 'DOMAIN-SUFFIX,steam-chat.com, 🚀 代理'
     - 'DOMAIN-SUFFIX,steamcdn-a.akamaihd.net, 🚀 代理'
@@ -664,11 +671,7 @@ rules:
     - 'DOMAIN-SUFFIX,browserleaks.com, 🚀 代理'
     - 'DOMAIN-SUFFIX,browserleaks.org, 🚀 代理'
     - 'DOMAIN-SUFFIX,vpnunlimited.com, 🚀 代理'
-    
-# Kyson add
-    - 'DOMAIN-SUFFIX,whoer.net, 🚀 代理'
-    - 'DOMAIN-SUFFIX,whrq.net, 🚀 代理'
-    
+        
 # LAN
     - 'IP-CIDR,192.168.0.0/16, 🎯 直连'
     - 'IP-CIDR,10.0.0.0/8, 🎯 直连'
