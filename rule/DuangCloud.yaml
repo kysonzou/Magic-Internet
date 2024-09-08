@@ -1,82 +1,60 @@
 # 2023.6.12 将bing关键字设置设置为代理模式，这样用bing搜索的时候不会跳到国内版本
 # 2023.7.24 更新新的节点信息，原来的节点是用不了Chatgpt
 
-# HTTP 代理端口
-port: 7890 
-
-# SOCKS5 代理端口
-socks-port: 7891 
-
-# Linux 和 macOS 的 redir 代理端口
-redir-port: 7892 
-
-# 允许局域网的连接
+mixed-port: 7890
 allow-lan: true
-
-# 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
-mode: Rule
-
-# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
-# 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
-log-level: silent
-# Clash 的 RESTful API
+bind-address: '*'
+mode: rule
+log-level: info
 external-controller: '127.0.0.1:9090'
-experimental:
-  ignore-resolve-fail: true
-# RESTful API 的口令
-secret: '' 
 
-# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
-# 参数应填写配置目录的相对路径或绝对路径。
-# external-ui: folder
-
-dns:
-    enable: true
-    ipv6: true
-    default-nameserver: [223.5.5.5, 119.29.29.29, 8.8.8.8]
-    enhanced-mode: fake-ip
-    fake-ip-range: 198.18.0.1/16
-    use-hosts: true
-    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
-    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
-    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+bypass-system : true
+skip-proxy : 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com
+tun-excluded-routes : 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32, 239.255.255.250/32
+dns-server : system
+ipv6 : true
+prefer-ipv6 : false
+dns-fallback-system : false
+dns-direct-system : false
+icmp-auto-reply : true
+always-reject-url-rewrite : false
+private-ip-answer : true
+# direct - DOMAIN fail to resolve use proxy rule
+dns-direct-fallback-proxy : true
 
 
 proxies:
-    - { name: '🇭🇰 香港 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56001, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇭🇰 香港 专线 A2', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56002, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇭🇰 香港 专线 A3', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56003, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇭🇰 香港 专线 A4', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56004, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇭🇰 香港 专线 A5', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56005, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇹🇼 台湾 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56021, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇹🇼 台湾 专线 A2', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56022, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇹🇼 台湾 专线 A3', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56023, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇹🇼 台湾 专线 A4', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56024, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇹🇼 台湾 专线 A5', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56025, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇺🇸 美国 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56051, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇺🇸 美国 专线 A2', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56052, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇺🇸 美国 专线 A3', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56053, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇺🇸 美国 专线 A4', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56054, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇺🇸 美国 专线 A5', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56055, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56041, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A2', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56042, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A3', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56043, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A4', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56044, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇸🇬 新加坡 专线 A5', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56045, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇯🇵 日本 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56031, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇯🇵 日本 专线 A2', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56032, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇯🇵 日本 专线 A3', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56033, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇯🇵 日本 专线 A4', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56034, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇯🇵 日本 专线 A5', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56035, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇰🇲 马来西亚 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56066, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇬🇧 英国 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56061, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇹🇷 土耳其 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56097, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
-    - { name: '🇦🇷 阿根廷 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56099, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
+    - { name: '🇭🇰 香港 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10001, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇭🇰 香港 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10002, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇭🇰 香港 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10003, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇭🇰 香港 专线 A4  |  NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10004, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇭🇰 香港 专线 A5 | 家庭宽带', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10005, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10011, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10012, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10013, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A4', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10014, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇹🇼 台湾 专线 A5 | NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10015, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10031, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10032, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10033, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A4', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10034, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇺🇸 美国 专线 A5 | NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10035, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10041, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10042, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10043, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A4', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10044, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇸🇬 新加坡 专线 A5 | NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10045, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10021, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A2', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10022, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A3', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10023, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A4', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10024, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇯🇵 日本 专线 A5 | NF ChatGPT', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10025, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
+    - { name: '🇰🇷 韩国 专线 A1', type: ss, server: abondon.ashjgltstgabhsdkonline.com, port: 10051, cipher: aes-128-gcm, password: 9053541f-c76c-4a69-a062-c43a9a9ea20c, udp: true }
 proxy-groups:
-    - { name: '🚀 代理', type: select, proxies: ['🇭🇰 香港 专线 A1', '🇭🇰 香港 专线 A2', '🇭🇰 香港 专线 A3', '🇭🇰 香港 专线 A4', '🇭🇰 香港 专线 A5', '🇹🇼 台湾 专线 A1', '🇹🇼 台湾 专线 A2', '🇹🇼 台湾 专线 A3', '🇹🇼 台湾 专线 A4', '🇹🇼 台湾 专线 A5', '🇺🇸 美国 专线 A1', '🇺🇸 美国 专线 A2', '🇺🇸 美国 专线 A3', '🇺🇸 美国 专线 A4', '🇺🇸 美国 专线 A5', '🇸🇬 新加坡 专线 A1', '🇸🇬 新加坡 专线 A2', '🇸🇬 新加坡 专线 A3', '🇸🇬 新加坡 专线 A4', '🇸🇬 新加坡 专线 A5', '🇯🇵 日本 专线 A1', '🇯🇵 日本 专线 A2', '🇯🇵 日本 专线 A3', '🇯🇵 日本 专线 A4', '🇯🇵 日本 专线 A5', '🇰🇲 马来西亚 专线 A1', '🇬🇧 英国 专线 A1', '🇹🇷 土耳其 专线 A1', '🇦🇷 阿根廷 专线 A1'] }
+    - { name: '🚀 代理', type: select, proxies: ['🇭🇰 香港 专线 A1', '🇭🇰 香港 专线 A2', '🇭🇰 香港 专线 A3', '🇭🇰 香港 专线 A4  |  NF ChatGPT', '🇭🇰 香港 专线 A5 | 家庭宽带', '🇹🇼 台湾 专线 A1', '🇹🇼 台湾 专线 A2', '🇹🇼 台湾 专线 A3', '🇹🇼 台湾 专线 A4', '🇹🇼 台湾 专线 A5 | NF ChatGPT', '🇺🇸 美国 专线 A1', '🇺🇸 美国 专线 A2', '🇺🇸 美国 专线 A3', '🇺🇸 美国 专线 A4', '🇺🇸 美国 专线 A5 | NF ChatGPT', '🇸🇬 新加坡 专线 A1', '🇸🇬 新加坡 专线 A2', '🇸🇬 新加坡 专线 A3', '🇸🇬 新加坡 专线 A4', '🇸🇬 新加坡 专线 A5 | NF ChatGPT', '🇯🇵 日本 专线 A1', '🇯🇵 日本 专线 A2', '🇯🇵 日本 专线 A3', '🇯🇵 日本 专线 A4', '🇯🇵 日本 专线 A5 | NF ChatGPT', '🇰🇷 韩国 专线 A1'] }
     - { name: '🐟 遗漏', type: select, proxies: ['🚀 代理', DIRECT, REJECT]}
     - { name: '🎯 直连', type: select, proxies: [DIRECT, '🚀 代理', REJECT]}
-    - { name: '♻️ 测速', type: url-test, proxies: ['🇭🇰 香港 专线 A1', '🇭🇰 香港 专线 A2', '🇭🇰 香港 专线 A3', '🇭🇰 香港 专线 A4  ', '🇭🇰 香港 专线 A5 | 家庭宽带', '🇹🇼 台湾 专线 A1', '🇹🇼 台湾 专线 A2', '🇹🇼 台湾 专线 A3', '🇹🇼 台湾 专线 A4', '🇹🇼 台湾 专线 A5', '🇺🇸 美国 专线 A1', '🇺🇸 美国 专线 A2', '🇺🇸 美国 专线 A3', '🇺🇸 美国 专线 A4', '🇺🇸 美国 专线 A5', '🇸🇬 新加坡 专线 A1', '🇸🇬 新加坡 专线 A2', '🇸🇬 新加坡 专线 A3', '🇸🇬 新加坡 专线 A4', '🇸🇬 新加坡 专线 A5', '🇯🇵 日本 专线 A1', '🇯🇵 日本 专线 A2', '🇯🇵 日本 专线 A3', '🇯🇵 日本 专线 A4', '🇯🇵 日本 专线 A5', '🇰🇷 韩国 专线 A1'], url: 'http://www.gstatic.com/generate_204', interval: 86400}
+    - { name: '♻️ 测速', type: url-test, proxies: ['🇭🇰 香港 专线 A1', '🇭🇰 香港 专线 A2', '🇭🇰 香港 专线 A3', '🇭🇰 香港 专线 A4  |  NF ChatGPT', '🇭🇰 香港 专线 A5 | 家庭宽带', '🇹🇼 台湾 专线 A1', '🇹🇼 台湾 专线 A2', '🇹🇼 台湾 专线 A3', '🇹🇼 台湾 专线 A4', '🇹🇼 台湾 专线 A5 | NF ChatGPT', '🇺🇸 美国 专线 A1', '🇺🇸 美国 专线 A2', '🇺🇸 美国 专线 A3', '🇺🇸 美国 专线 A4', '🇺🇸 美国 专线 A5 | NF ChatGPT', '🇸🇬 新加坡 专线 A1', '🇸🇬 新加坡 专线 A2', '🇸🇬 新加坡 专线 A3', '🇸🇬 新加坡 专线 A4', '🇸🇬 新加坡 专线 A5 | NF ChatGPT', '🇯🇵 日本 专线 A1', '🇯🇵 日本 专线 A2', '🇯🇵 日本 专线 A3', '🇯🇵 日本 专线 A4', '🇯🇵 日本 专线 A5 | NF ChatGPT', '🇰🇷 韩国 专线 A1'], url: 'http://www.gstatic.com/generate_204', interval: 86400}
     
 rules:
 # Baidu/iqiyi
