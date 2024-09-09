@@ -446,6 +446,7 @@ rules:
     - 'DOMAIN-SUFFIX,steamusercontent.com, 🚀 代理'  
 # kyson netflix  
     - 'DOMAIN,netflix.com, 🚀 代理'
+    - 'DOMAIN-KEYWORD,netflix, 🚀 代理'
  
 
 # Apple
