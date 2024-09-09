@@ -443,8 +443,10 @@ rules:
     - 'DOMAIN-SUFFIX,steampowered.com, 🚀 代理'
     - 'DOMAIN-SUFFIX,steamstat.us, 🚀 代理'
     - 'DOMAIN-SUFFIX,steamstatic.com, 🚀 代理'
-    - 'DOMAIN-SUFFIX,steamusercontent.com, 🚀 代理'    
-
+    - 'DOMAIN-SUFFIX,steamusercontent.com, 🚀 代理'  
+# kyson netflix  
+    - 'DOMAIN,netflix.com, 🚀 代理'
+ 
 
 # Apple
     # Apple - News
@@ -489,7 +491,7 @@ rules:
     # - 'DOMAIN,gspe1-ssl.ls.apple.com,🚀 代理'
     - 'DOMAIN,np-edge.itunes.apple.com,🚀 代理'
     - 'DOMAIN,play-edge.itunes.apple.com,🚀 代理'
-    - 'DOMAIN-SUFFIX,tv.apple.com,🚀 代理'
+    - 'DOMAIN-SUFFIX,tv.apple.com,🎯 直连'
 
 # Google
     - 'DOMAIN-KEYWORD,blogspot, 🚀 代理'
