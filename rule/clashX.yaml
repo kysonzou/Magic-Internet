@@ -43,6 +43,7 @@ dns:
 
 
 proxies:
+    - { name: 'aws', type: ss, server: 3.92.244.160, port: 8388, cipher: chacha20-ietf-poly1305, password: 2jhocirwFlzJ, udp: true }
     - { name: '🇭🇰 香港 专线 A1', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56001, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
     - { name: '🇭🇰 香港 专线 A2', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56002, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
     - { name: '🇭🇰 香港 专线 A3', type: ss, server: 188dc591.pnd6xm1ljcfpc3b-fbnode.6pzfwf.com, port: 56003, cipher: chacha20-ietf-poly1305, password: It5SdZ, udp: true }
